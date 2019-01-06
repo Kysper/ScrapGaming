@@ -28,7 +28,7 @@ db.once("open", function() {
 
 //Handlebars
 const exphbs = require('express-handlebars')
-app.engine('.hbs', exphbs({defaultLayout: 'main', extname:'.hbs'}))
+app.engine('.hbs', exphbs({defaultLayout: 'index', extname:'.hbs'}))
 app.set('view engine', '.hbs')
 
 //Routes
