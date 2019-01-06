@@ -1,0 +1,22 @@
+<body>
+  <ul class="nav">
+  <li class="nav-item">
+     <a href='/'>Home</a>
+  </li>
+  <li class="nav-item">
+ <a href='/scrape'>Scrape!</a>
+  </li>
+  <li class="nav-item">
+ <a href='/articles'>Saved Articles</a>
+  </li>
+  </ul>
+  <hr>
+  <form>
+  <div class="form-group">
+    <h2>Enter your comment here</h2>
+  <textarea type="text" class="form-control" id='body' value='text' placeholder=" Insert Comment here">
+  </textarea>
+  </div>
+  <button type="submit" href='/articles/note/{{this._id}}' class="btn btn-primary">Submit</button>
+</form>
+</body>

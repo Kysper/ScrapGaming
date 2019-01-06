@@ -1,0 +1,36 @@
+<body>
+  <ul class="nav">
+  <li class="nav-item">
+     <a href='/'>Home</a>
+  </li>
+  <li class="nav-item">
+ <a href='/scrape'>Scrape!</a>
+  </li>
+  <li class="nav-item">
+ <a href='/saved'>Saved Articles</a>
+  </li>
+  </ul>
+  <hr>
+  <ul>
+  {{#each articles}}
+  <div class="card">
+  <div class="card-header">
+   <span>
+     <h3>{{this.title}}</h3>
+     <a href='/articles/save/{{this._id}}'>Save Article</a> | <a href='/articles/delete/{{this._id}}'>Delete Article</a>
+     </span>
+  </div>
+  <div class="card-body">
+   <p><h2>Description:</h2> {{this.shortDesc}}</p>
+   <br>
+   <p><a href='{{this.link}}'>Link to Article</a></p>
+  </div>
+  <span class='comment'>
+  <a id='addComments' href='/notes'>Add a Comment</a> 
+  <a id='showComments' href='/saved/{{this._id}}'>View Comment</a>
+  </span>
+</div>
+<br><br>
+  {{/each}}
+  </ul>
+</body>
