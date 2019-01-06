@@ -12,7 +12,8 @@ const app = express()
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 //DB configuration
-mongoose.connect('mongodb://localhost/mongoHeadlines', {useNewUrlParser: true});
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 var db = mongoose.connection;
 // Show any mongoose errors
